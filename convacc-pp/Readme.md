@@ -4,27 +4,37 @@
 Folder name: conv-pp
 # Accelerator detail
 Input number of ports: 1
-Tm: 
-Tn: 
-Tr: 
-Tc: 
+Tm: 32
+Tn: 8
+Tr: 32
+Tc: 32
+S:  5
+K:  11
 
 Interface settings:
 int param[16] -- bram
-data_type_w *conv_weight_port -- m_axi depth=8192 //connected to aws DDR memory space
-data_type_w *conv_bias_port  -- m_axi depth=8192 //connected to aws DDR memory space
+data_type_w   conv_weight_port[8192] -- bram
+data_type_w   conv_bias_port[64]  -- bram
 data_type_o   temp_out_0_1[8192] -- bram
 data_type_o   temp_out_1_1[8192] -- bram
 
 Dataflow optimization: None
-Input/output function pipelining: Yes
-Description: Input buffers are doubled with ping-pong buffer, output buffers are not.
+Input/output function pipelining: Yes(inner most loop)
+Description: Input buffers and output buffers are doubled with ping-pong buffer.
 Addition: No URAM is used in this acc system, only on-chip BRAMs are involved
 
 
 # Final timing
 CP required:    10.000
-CP achieved post-synthesis:    3.912
+CP achieved post-synthesis:    5.305
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:         101381
+FF:           92610
+DSP:           1350
+BRAM:          1472
+SRL:            190
 
 
 # In system address mapping
@@ -35,9 +45,9 @@ check pdf file.
 
 # Evaluation comments
 Test points:
-(1) whether m_axi could read from bram memory(with same address mapping with aws_0)
-(2) if acc_param bram interface could work properly
-(3) input/output thorughput testing
+(1) input/output data read/write speed
+(2) conv processing speed with different acc_params
+(3) if bias is not added into the final results
 
 {
     "FpgaImageId": "afi-0e8621b3838d0aca2", 
@@ -62,28 +72,7 @@ Test points:
 }
 
 
-2. BLOCKRAM
------------
-+-------------------+--------+-------+-----------+-------+
-|     Site Type     |  Used  | Fixed | Available | Util% |
-+-------------------+--------+-------+-----------+-------+
-| Block RAM Tile    | 1523.5 |     0 |      2160 | 70.53 |
-|   RAMB36/FIFO*    |   1259 |   265 |      2160 | 58.29 |
-|     FIFO36E2 only |     24 |       |           |       |
-|     RAMB36E2 only |   1235 |       |           |       |
-|   RAMB18          |    529 |     9 |      4320 | 12.25 |
-|     RAMB18E2 only |    529 |       |           |       |
-| URAM              |      0 |     0 |       960 |  0.00 |
-+-------------------+--------+-------+-----------+-------+
 
-
-3. ARITHMETIC
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           | 1464 |     3 |      6840 | 21.40 |
-|   DSP48E2 only | 1464 |       |           |       |
-+----------------+------+-------+-----------+-------+
 
 
 
