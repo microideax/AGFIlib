@@ -50,23 +50,23 @@ Test points:
 (3) if bias is not added into the final results
 
 {
-    "FpgaImageId": "afi-0e8621b3838d0aca2", 
-    "FpgaImageGlobalId": "agfi-0fdec64a8cbdbb495"
+    "FpgaImageId": "afi-0cd76c638f3f18d9a", 
+    "FpgaImageGlobalId": "agfi-06ee96423f1adee66"
 }
+
 {
     "FpgaImages": [
         {
-            "UpdateTime": "2017-11-07T12:09:39.000Z", 
-            "Name": "conv-ping-pong", 
-            "FpgaImageGlobalId": "agfi-0fdec64a8cbdbb495", 
+            "UpdateTime": "2017-11-10T05:27:50.000Z", 
+            "Name": "conv-pp-wbctrl", 
+            "FpgaImageGlobalId": "agfi-06ee96423f1adee66", 
             "Public": false, 
             "State": {
                 "Code": "pending"
             }, 
             "OwnerId": "373589651276", 
-            "FpgaImageId": "afi-0e8621b3838d0aca2", 
-            "CreateTime": "2017-11-07T12:09:39.000Z", 
-            "Description": "conv with pingpong buffer and bram interface"
+            "FpgaImageId": "afi-0cd76c638f3f18d9a", 
+            "CreateTime": "2017-11-10T05:27:50.000Z"
         }
     ]
 }
