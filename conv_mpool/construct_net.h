@@ -18,8 +18,8 @@ void   inference_net(
 //   data_type_w fc_weight_port[4000],
 //   data_type_w fc_bias_port[10],
 //   data_type_o   fc_3_out_a[10*1*1],
-   data_type_o   temp_out_0_1[59168],
-   data_type_o   temp_out_1_1[12544]){
+   data_type_o   temp_out_0_1[8192],
+   data_type_o   temp_out_1_1[8192]){
 
 #if _HLS_MODE_
 #pragma HLS INTERFACE s_axilite port=return bundle=CRTL_BUS
