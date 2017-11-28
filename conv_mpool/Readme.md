@@ -17,8 +17,16 @@ All Bram
 
 # In system address mapping
 Check excel file.
+axi_bram_ctrl_0 -> conv_weight_port
+axi_bram_ctrl_1 -> conv_bias_port
+axi_bram_ctrl_2 -> out_buf_0
+axi_bram_ctrl_3 -> out_buf_1
+axi_bram_ctrl_4 -> ctrl_cmd_in
+axi_bram_ctrl_5 -> conv_param_in
+axi_bram_ctrl_6 -> pool_param_in
 # System architecture
 Check pdf file.
+
 
 # Evaluation comments:
 Control command format:
