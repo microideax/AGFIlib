@@ -34,9 +34,6 @@ check pdf file.
 
 # Evaluation comments
 Test points:
-(1) input/output data read/write speed
-(2) conv processing speed with different acc_params
-(3) if bias is not added into the final results
 
 {
     "FpgaImageId": "afi-025131473acb472bf", 
