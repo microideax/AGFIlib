@@ -1,28 +1,21 @@
 {
-    "FpgaImageId": "afi-0834ea09d21a32508",
-    "FpgaImageGlobalId": "agfi-01aa11d14df095396"
+    "FpgaImageId": "afi-0d1494262d541fd5f",
+    "FpgaImageGlobalId": "agfi-09b1e806f64cff9da"
 }
 {
     "FpgaImages": [
         {
-            "UpdateTime": "2018-01-09T01:45:52.000Z", 
-            "Name": "conv-engine-bdport", 
-            "PciId": {
-                "SubsystemVendorId": "0xfedd", 
-                "VendorId": "0x1d0f", 
-                "DeviceId": "0xf000", 
-                "SubsystemId": "0x1d51"
-            }, 
-            "FpgaImageGlobalId": "agfi-01aa11d14df095396", 
+            "UpdateTime": "2018-01-10T01:10:08.000Z",
+            "Name": "conv-engine-bdport",
+            "FpgaImageGlobalId": "agfi-09b1e806f64cff9da",
+            "Public": false,
             "State": {
-                "Code": "available"
-            }, 
-            "ShellVersion": "0x071417d3", 
-            "OwnerId": "373589651276", 
-            "FpgaImageId": "afi-0834ea09d21a32508", 
-            "CreateTime": "2018-01-09T01:07:37.000Z", 
-            "Description": "conv engine with bd ports"
+                "Code": "pending"
+            },
+            "OwnerId": "373589651276",
+            "FpgaImageId": "afi-0d1494262d541fd5f",
+            "CreateTime": "2018-01-10T01:10:08.000Z",
+            "Description": "conv engine with bd port"
         }
     ]
 }
-
