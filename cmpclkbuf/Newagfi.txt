@@ -1,0 +1,22 @@
+{
+    "FpgaImageId": "afi-0722f9b1bcddbe41d", 
+    "FpgaImageGlobalId": "agfi-06217920f964a3004"
+}
+{
+    "FpgaImages": [
+        {
+            "UpdateTime": "2018-01-24T03:13:51.000Z", 
+            "Name": "membanktest", 
+            "FpgaImageGlobalId": "agfi-06217920f964a3004", 
+            "Public": false, 
+            "State": {
+                "Code": "pending"
+            }, 
+            "OwnerId": "373589651276", 
+            "FpgaImageId": "afi-0722f9b1bcddbe41d", 
+            "CreateTime": "2018-01-24T03:13:51.000Z", 
+            "Description": "mem bank test without Accs"
+        }
+    ]
+}
+
